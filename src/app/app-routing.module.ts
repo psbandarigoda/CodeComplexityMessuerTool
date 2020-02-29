@@ -1,21 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {UploadComponent} from "./upload/upload.component";
+import {MainComponent} from "./main/main.component";
 
 
 const routes: Routes = [
   {
-    path: 'upload',
-    component: UploadComponent,
+    path: 'main',
+    component: MainComponent,
     children: [
-      // {
-      //   path: 'employee',
-      //   component: EmployeeComponent
-      // }
+      {
+        path: 'upload',
+        component: UploadComponent
+      }
     ]
   },
 
-  {path: '', pathMatch: "full", redirectTo: '/upload'}
+  {path: '', pathMatch: "full", redirectTo: '/main/upload'}
 ];
 
 

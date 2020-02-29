@@ -1,0 +1,53 @@
+<div class="wrapper">
+  <div class="sidebar" data-background-color="black" data-color="purple" data-image="assets/img/sidebar-1.jpg">
+    <div class="logo">
+      <a class="simple-text logo-normal" href="" style="margin-left: 30px">
+        CCMT
+      </a>
+    </div>
+    <div class="sidebar-wrapper">
+      <ul class="nav">
+        <li (click)="changeRoute(upload.innerHTML)" [ngClass]="{'active': headerText=='Uploade'}" class="nav-item">
+          <a class="nav-link">
+            <i class="fas fa-home"></i>
+            <p #upload>Uploade</p>
+          </a>
+        </li>
+        <li (click)="changeRoute(overView.innerHTML)" [ngClass]="{'active': headerText=='OverView'}" class="nav-item">
+          <a class="nav-link">
+            <i class="fas fa-user-edit"></i>
+            <p #overView>Over View</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="main-panel">
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+    <footer class="footer">
+      <div class="container-fluid">
+        <nav class="float-left">
+          <ul>
+            <li>
+              <a href="https://www.creative-tim.com">
+                PSTechInnovations(pvt)ltd
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="copyright float-right">
+          &copy;
+          <script>
+            document.write(new Date().getFullYear())
+          </script>
+          made with by
+          <a href="https://www.creative-tim.com" target="_blank">PS </a> for a better web.
+        </div>
+        <!-- your footer here -->
+      </div>
+    </footer>
+  </div>
+</div>
